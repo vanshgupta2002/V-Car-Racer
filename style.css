@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    
+    background-image: url(bg2.gif);
+    background-repeat: no-repeat;
+    background-size: 100vw 67vh;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+
+}
+.gameContainer{
+    background-image: url(bg.gif);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height:100vh;
+
+}
+.car{
+    background-image: url(cargif.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 260px;
+    height: 112px;
+    position: absolute;
+    bottom: 175px;
+    left: 12vw;
+
+}
+.obstacle{
+    background-image: url(stone.png);
+    width: 95px;
+    height: 67px;
+    background-size: cover;
+    position: absolute;
+    bottom:175px;
+    left:56vw
+}
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center;
+    visibility: hidden;
+    font-family: sans-serif;
+    color: red;
+
+}
+#scoreCount{
+    position: relative;
+    left: 23px;
+    top: -28px;
+    border: 2px solid black;
+    width: 112px;
+    color: red;
+}
+.animateCar{
+    animation: car 0.9s linear; 
+}
+.obstacleAni{
+    animation: obstacleAni 3s linear infinite;
+}
+@keyframes car{
+    0%{
+        bottom: 175px;;
+    }
+    50%{
+        bottom: 450px;
+
+    }
+    100%{
+         bottom: 180px;     
+
+    }
+}
+.animateCar1{
+    animation: car1 1s linear; 
+}
+@keyframes car1{
+    0%{
+        bottom: 175px;;
+    }
+    50%{
+        bottom: 250px;
+        rotate: 180deg;
+
+    }
+    100%{
+         bottom:-1000px ;     
+
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left:100vw;
+    }
+    100%{
+        left:-10vw;
+    }
+
+}
